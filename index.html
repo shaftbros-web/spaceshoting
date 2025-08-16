@@ -149,6 +149,7 @@
 
     let spawnTimer = 0; // 敵スポーン
     let fireTimer = 0;  // 自機オート射撃
+    let powerLevel = 1; // 自機パワーアップ段階
 
     const COLORS = ["#93c5fd", "#a78bfa", "#f472b6", "#f59e0b", "#34d399"];
 
@@ -202,7 +203,13 @@
 
         // 射撃
         fireTimer -= dt;
-        if(fireTimer <= 0){ fireTimer = 0.18; bullets.push({x:player.x, y:player.y - player.r - 4, v: -420}); beep(880,0.08,"square",0.15); }
+        if(fireTimer <= 0){
+          fireTimer = 0.18;
+          if(powerLevel===1){ bullets.push({x:player.x, y:player.y - player.r - 4, v:-420}); }
+          else if(powerLevel===2){ bullets.push({x:player.x-6, y:player.y - player.r - 4, v:-420}); bullets.push({x:player.x+6, y:player.y - player.r - 4, v:-420}); }
+          else if(powerLevel>=3){ bullets.push({x:player.x, y:player.y - player.r - 4, v:-420}); bullets.push({x:player.x-10, y:player.y - player.r - 4, v:-420}); bullets.push({x:player.x+10, y:player.y - player.r - 4, v:-420}); }
+          beep(880+powerLevel*40,0.08,"square",0.15);
+        }
 
         // 敵スポーン
         spawnTimer -= dt;
@@ -259,7 +266,10 @@
         // 衝突（自弾→敵）
         for(let i=enemies.length-1;i>=0;i--){ const e=enemies[i];
           for(let j=bullets.length-1;j>=0;j--){ const b=bullets[j]; const dx=e.x-b.x, dy=e.y-b.y; if(dx*dx+dy*dy <= (e.r+6)*(e.r+6)){
-            bullets.splice(j,1); e.hp--; if(e.hp<=0){ enemies.splice(i,1); score+=20; elScore.textContent=`SCORE ${score}`; burst(e.x,e.y,COLORS[Math.floor(Math.random()*COLORS.length)],12); beep(540,0.08,"triangle",0.22); }
+            bullets.splice(j,1); e.hp--; if(e.hp<=0){ enemies.splice(i,1); score+=20; elScore.textContent=`SCORE ${score}`;
+            // パワーアップチェック
+            const newLevel = 1 + Math.floor(score/100);
+            if(newLevel>powerLevel){ powerLevel=newLevel; burst(player.x,player.y-20,"#34d399",12); beep(960,0.1,"square",0.25); } burst(e.x,e.y,COLORS[Math.floor(Math.random()*COLORS.length)],12); beep(540,0.08,"triangle",0.22); }
             break;
           } }
         }
@@ -324,7 +334,7 @@
     // ====== ゲーム制御 ======
     function startGame(){
       running = false;
-      timeLeft = 60.0; score = 0; life = 3;
+      timeLeft = 60.0; score = 0; life = 3; powerLevel = 1;
       enemies=[]; bullets=[]; ebullets=[]; particles=[]; spawnTimer=0; fireTimer=0;
       elScore.textContent = `SCORE ${score}`;
       elTimer.textContent = `${timeLeft.toFixed(1)}s`;
