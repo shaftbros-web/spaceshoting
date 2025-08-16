@@ -1,402 +1,3 @@
-コンテンツへとスキップする
-あなた:
-スマホゲームが作りたいです
-ChatGPT:
-
-思考完了
-あなた:
-中学生が初めてのバイブコーディングでアプリ作成に挑戦します
-スマホゲームが作りたいです
-githabで公開したいです
-ステップ倍ステップで対話式でお願いします
-ChatGPT:
-
-思考時間: 50s
-いいね！“中学生の初めてのバイブ（vibe）コーディング”で、スマホ対応の超シンプルなゲームをGitHubで公開するところまで、対話で一緒にやろう。
-（いきなり全部のコードは大変なので）まずは最小構成で動く版から。必要なHTMLをキャンバスに置いておきました→ そこにある index.html を丸ごとコピペすればOKです。
-
-ステップ1：GitHubの準備（5分）
-GitHubにサインイン → 右上「＋」→ New repository
-
-Repository name：mobile-tap-game（好きな名前でOK）
-
-Public を選ぶ → Create repository
-
-画面上のタブから Settings → 左メニュー Pages へ。
-
-Build and deployment を Deploy from a branch に変更
-
-Branch を main、フォルダ /root にして Save
-（この設定で GitHub Pages が有効化され、公開URLが発行されます）
-
-ここまでできたら「ステップ1OK」と返事してください。次に進みます。
-
-ステップ2：ファイルを作る（3分）
-リポジトリの Code タブで Add file → Create new file
-
-ファイル名を index.html にする
-
-右側（エディタ）に、キャンバスに用意したコードを全部コピペ
-
-下の Commit changes を押す
-
-できたら「ステップ2OK」と返事してください。
-
-ステップ3：公開URLを開く（1〜2分）
-再び Settings → Pages を開くと、上部に 公開URL が表示されます。
-例：https://<あなたのユーザー名>.github.io/mobile-tap-game/
-
-スマホ（Chrome/Safari）でアクセスして、
-「スタート」ボタンが出て、30秒のタップゲームが動くことを確認。
-
-開けたら、その URL をここに貼ってください（確認＆次の改良に進みます）。
-
-今入っている機能（最小だけどスマホで遊べます）
-全画面キャンバス・高解像度対応（Android/iOS）
-
-タップで落ちてくる“フルーツ”をキャッチ → 1つ10点
-
-30秒制限／スコア・タイマー／ベストスコア保存（ローカル）
-
-スタート／リトライの大きなボタンつき
-
-スクロール誤動作を抑制（ゲーム中に画面が動かない）
-
-この先の拡張（あなたの希望に合わせて）
-効果音（ミュート切替）・コンボ・難易度アップ
-
-スキン変更（スプラ風／サンリオ風など）
-
-GitHub Pages 用のアイコンやPWA対応（ホーム画面に追加）
-
-スコアランキング（サーバーなしならローカル擬似ランキングも可）
-
-まずは ステップ1 からいこう！
-つまずいたら「今ここで止まった」とだけ書いてくれれば、そこから直します。
-
-あなた:
-Branch を mainが選択できません
-ChatGPT:
-なるほど 👍
-「Branch → main」が選べないのは、まだそのリポジトリに ファイルやコミットが1つもない 状態だからです。
-
-GitHub Pages の公開設定で選べるブランチは、最低限 1回以上のコミット（= ファイルを作って保存）が必要です。
-
-✅ 解決手順
-リポジトリの Code タブに戻る
-
-「Add file → Create new file」を押す
-
-ファイル名を index.html にする
-
-私がキャンバスに置いておいたコードを 全部コピペ
-
-下にスクロールして Commit new file を押す
-
-👉 これで自動的に mainブランチ が作成されます。
-
-次に
-再度 Settings → Pages を開くと、Branch に main が選択できるようになります。
-
-そこから /root を指定して保存すれば、数分後に公開URLが出ます。
-
-ここで質問です：
-いまリポジトリにファイルを1つも入れていない状態ですか？
-それなら、この手順をやれば main が出てきますよ。
-
-あなた:
-Add fileはどこですか
-ChatGPT:
-いい質問です！👍
-ちょっと分かりにくい場所にあるので、画面の見方を説明しますね。
-
-📌 Add file の場所
-GitHubで、自分のリポジトリ（作ったばかりの空のリポジトリ）を開きます。
-→ 上部のタブは Code / Issues / Pull requests / … と並んでいます。
-
-いまリポジトリが空なら、中央に
-「Quick setup」 や 「…or create a new file」 といった大きな案内が表示されています。
-その中に 「creating a new file」 という青いリンクがあります。
-👉 これをクリックすると、すぐにファイル作成画面に行けます。
-
-もしすでに何かファイルがあるリポジトリを開いた場合は、
-
-ページの右上あたりに 「Add file ▾」 という緑のボタンがあります。
-
-クリックするとメニューが開いて 「Create new file」 と 「Upload files」 が選べます。
-
-ここから Create new file を選んでください。
-
-次のステップ
-ファイル名に index.html と入力する
-
-エディタ部分に私が用意したコードをコピペする
-
-下までスクロールして Commit new file を押す
-
-これで mainブランチ が作成されます。
-
-👉 画面に「creating a new file」リンクは見えますか？それとも Add file ボタンが右上にありますか？
-
-あなた:
-Add fileがあります
-ChatGPT:
-いいですね！🎉 それならもう一歩です。
-
-手順（Add fileからファイル作成）
-右上の 「Add file ▾」 をクリック
-
-メニューから 「Create new file」 を選ぶ
-
-上の入力欄に index.html と入力
-
-大きな白いエディタに、私が用意した ゲームのコード全文 をコピペ
-
-ページの一番下にある 緑のボタン「Commit new file」 をクリック
-
-これでリポジトリに初めてのファイルが入り、同時に mainブランチ も自動的に作られます。
-→ そうすると、Settings → Pages で main が選べるようになりますよ。
-
-👉 ここまで終わったら「index.html 入れました」と教えてください。
-次は 公開URLの確認 に進みましょう 🚀
-
-あなた:
-index.html 入れました
-ChatGPT:
-すばらしいです！👏 これで mainブランチ が自動的に作成されました。
-次は公開設定に進みましょう。
-
-🌐 GitHub Pages で公開する手順
-リポジトリの上部タブから Settings をクリック
-
-左側のメニューの下の方にある Pages をクリック
-
-Build and deployment の項目を探す
-
-Source を Deploy from a branch に変更
-
-Branch を main にして、フォルダは / (root) を選択
-
-Save を押す
-
-数十秒〜数分待つと、ページの上部に
-「Your site is live at 
-という公開URLが表示されます。
-
-📱 公開確認
-そのURLをスマホやPCで開くと、
-「スタート」ボタンのついたタップゲームが表示されるはずです。
-
-👉 次のステップは「URLを見つけて開いてみる」ことです。
-URLが表示されたらここに貼ってみますか？
-
-あなた:
-できました
-ChatGPT:
-
-思考時間: 18s
-
-思考時間: 13s
-公開おめでとう！🎉
-ついでに、ゲームをちょい進化させておきました（キャンバスの index.html を更新済み）：
-
-右下に🔊ミュート切替ボタン（設定は自動保存）
-
-ヒット時にポンッという効果音＋短い振動（対応端末）
-
-3→2→1 カウントダウンしてから開始
-
-反映方法（GitHub上でOK）
-リポジトリの Code → index.html を開く
-
-右上の 鉛筆（Edit） を押す
-
-キャンバスの最新版と差し替え（コピペ）
-
-下の Commit changes を押す
-
-数十秒後、公開サイトをリロード（キャッシュ強い時はシークレットタブで）
-
-次のステップ（選べます）
-A. 効果音の音量や種類を変える（高い/低い音や長さ）
-B. アイコン＆PWA（ホーム画面から起動できる“アプリ化”）
-C. 見た目スキン（色や背景、フルーツの形）
-D. 難易度アップ（落下数・速度が時間で上がる、コンボなど）
-
-やりたい項目を一つ選んでください。
-たとえば「B（PWA）」なら、manifestとアイコン素材までこちらで用意して、またステップ×ステップで進めます！
-
-あなた:
-自分のゲームが作りたいです
-ChatGPT:
-
-思考時間: 7s
-いいね、“自分のゲーム”を作ろう！
-最初は、完成まで一直線にいけるテンプレ×テーマ方式で進めます。下から1つ選んで、テーマとタイトルを教えてください。選んだら、こちらでコードを用意してGitHubに貼るだけの状態にします。
-
-Step 1: ゲームタイプを選ぶ（番号でOK）
-タップ収集：落ち物をタップで集める（今の基礎を“自分テーマ”に）
-
-横スクロール回避：画面タップで上下移動し、障害物を避ける（片手操作）
-
-ランナー：自動で走るキャラをジャンプで障害物回避（2ボタン）
-
-簡単シューティング：自機が自動射撃、指で移動して敵を避ける
-
-クイズ/暗号解読：1問ずつテンポよく出題（教科・ジャンル自由）
-
-Step 2: テーマと見た目
-テーマ例：スプラ風インク / 宇宙 / 忍者 / 果物 / 海の生き物 / サンリオ風（雰囲気）
-
-カラー雰囲気：明るい／ダーク／パステル
-
-タイトル：例「宇宙インク・ダッシュ」
-
-Step 3: 難易度と操作
-プレイ時間：30秒 / 60秒 / エンドレス
-
-追加要素（任意）：コンボ、パワーアップ、SE/BGM、カウントダウン、バイブ
-
-返信フォーマット（そのまま埋めてください）
-タイプ：（番号）
-
-テーマ：（例：宇宙×パステル）
-
-タイトル：（例：コズミック・タップ）
-
-プレイ時間：（例：60秒）
-
-追加要素：（例：コンボ＋BGM）
-
-例）タイプ4、テーマ＝スプラ風インク×ダーク、タイトル＝インク・ブレイズ、プレイ時間60秒、追加＝パワーアップ＋カウントダウン
-
-あなたの指定をもらえたら、専用のindex.htmlを作ってキャンバスに置く→GitHubにコピペで公開、まで一気にいきます。
-
-あなた:
-４　宇宙　スペースシューティング
-ChatGPT:
-
-思考時間: 9s
-
-代わりにチャットで回答
-最高のチョイス！タイプ4：スペース・シューティングで、スマホ向けのドラッグ移動＋自動射撃の完成版を用意しました。
-いま、キャンバスに index.html を置いてあります（60秒制・HP3・ハイスコア保存・ミュート・カウントダウン付き）。
-
-反映ステップ（GitHub上でOK）
-リポジトリの Code → Add file → Create new file
-
-ファイル名を index.html
-
-キャンバスのコードを丸ごとコピペ
-
-下の Commit changes を押す
-
-公開URL（GitHub Pages）をリロード
-
-キャッシュが強いときはシークレットタブで開くと確実です
-
-操作方法
-指でドラッグして自機を移動（どこでもOK）
-
-ショットは自動発射
-
-敵 or 敵弾に当たると**ライフ（❤️×3）**が減少
-
-60秒でできるだけ敵を倒してSCOREアップ
-
-右下の🔊でミュート切替（保存されます）
-
-次に足す候補（好きなの言ってね）
-BGM/効果音の調整（テンポや音色）
-
-パワーアップ（連射・ワイド・シールド）
-
-ボス戦（残り15秒で登場など）
-
-スキン（宇宙の色味や星雲、弾の形）
-
-PWA化（ホーム画面から起動できるアプリ化）
-
-まずはこのv1を公開に反映してみてください。
-表示できたらURLを教えてくれれば、難易度調整や演出追加を一緒に仕上げます！
-
-
-
-選択されていません選択されていません
-ChatGPT の回答は必ずしも正しいとは限りません。重要な情報は確認するようにしてください。
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -413,14 +14,14 @@ ChatGPT の回答は必ずしも正しいとは限りません。重要な情報
     canvas{ width:100vw; height:100vh; display:block; touch-action:none; }
 
     /* UI overlays */
-    .overlay{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:24px; pointer-events:none; }
+    .overlay{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:24px; pointer-events:none; z-index:50; }
     .panel{ pointer-events:auto; width:min(560px, 92vw); background:rgba(15,23,42,.9); border:1px solid #1f2937; backdrop-filter: blur(6px); border-radius:20px; padding:18px 18px 14px; box-shadow: 0 10px 30px rgba(0,0,0,.35); text-align:center; }
     h1{ margin:8px 0 2px; font-size: clamp(20px, 5vw, 28px); }
     p{ margin:8px 0; color:var(--muted); font-size: clamp(14px, 3.6vw, 16px); }
     .row{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px; }
     button{ appearance:none; border:none; border-radius:999px; padding:14px 18px; font-size: clamp(16px,4.4vw,18px); font-weight:700; background:linear-gradient(180deg, #93c5fd, #3b82f6); color:#06142a; box-shadow: 0 6px 18px rgba(59,130,246,.35); cursor:pointer; }
     button.secondary{ background:#1f2433; color:#d1d5db; box-shadow:none; }
-    .hud{ position:fixed; left:10px; right:10px; top:8px; display:flex; justify-content:space-between; gap:10px; pointer-events:none; font-weight:700; text-shadow: 0 2px 6px rgba(0,0,0,.6); }
+    .hud{ position:fixed; left:10px; right:10px; top:8px; display:flex; justify-content:space-between; gap:10px; pointer-events:none; font-weight:700; text-shadow: 0 2px 6px rgba(0,0,0,.6); z-index:40; }
     .hud span{ background:rgba(0,0,0,.35); padding:6px 10px; border-radius:12px; }
     .hidden{ display:none !important; }
 
@@ -469,4 +70,251 @@ ChatGPT の回答は必ずしも正しいとは限りません。重要な情報
   <!-- リザルト画面 -->
   <div id="result" class="overlay hidden">
     <div class="panel">
-ChatGPT に編集を依頼します
+      <h1>結果発表</h1>
+      <p id="resultText">SCORE 0 / BEST 0</p>
+      <div class="row">
+        <button id="btnRetry">もう一度</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ====== 安全に要素取得 ======
+    const $ = (id) => document.getElementById(id);
+    const canvas = $("game");
+    const ctx = canvas.getContext("2d", { alpha: false });
+    const hud = $("hud");
+    const elScore = $("score");
+    const elTimer = $("timer");
+    const elBest = $("best");
+    const elLife = $("life");
+    const startOverlay = $("start");
+    const resultOverlay = $("result");
+    const resultText = $("resultText");
+    const countOverlay = $("count");
+    const countNum = $("countNum");
+    const btnStart = $("btnStart");
+    const btnHow = $("btnHow");
+    const btnRetry = $("btnRetry");
+    const btnMute = $("btnMute");
+
+    // ====== サウンド（WebAudio） ======
+    const AUDIO_KEY = "space-muted";
+    let muted = localStorage.getItem(AUDIO_KEY) === "1";
+    let actx = null;
+    function ensureAudio(){ if(!actx){ try{ actx = new (window.AudioContext||window.webkitAudioContext)(); }catch{} } }
+    function beep(freq=660, dur=0.12, type="triangle", gain=0.25){ if(muted) return; ensureAudio(); if(!actx) return; const t=actx.currentTime; const o=actx.createOscillator(); const g=actx.createGain(); o.type=type; o.frequency.value=freq; g.gain.setValueAtTime(0.001,t); g.gain.exponentialRampToValueAtTime(gain,t+0.01); g.gain.exponentialRampToValueAtTime(0.001,t+dur); o.connect(g).connect(actx.destination); o.start(t); o.stop(t+dur+0.02); }
+    function setMute(v){ muted=v; btnMute.textContent = muted?"🔇":"🔊"; localStorage.setItem(AUDIO_KEY, muted?"1":"0"); }
+    function primeAudio(){ ensureAudio(); if(actx && actx.state === 'suspended'){ try{ actx.resume(); }catch{} } }
+
+    // ====== 画面サイズ対応（高解像度対応） ======
+    const state = { width: 1280, height: 720, dpr: Math.max(1, Math.min(window.devicePixelRatio || 1, 2)) };
+    function resize(){
+      state.width = Math.max(320, Math.floor(window.innerWidth));
+      state.height = Math.max(320, Math.floor(window.innerHeight));
+      const { dpr } = state;
+      canvas.width = Math.floor(state.width * dpr);
+      canvas.height = Math.floor(state.height * dpr);
+      canvas.style.width = state.width + "px";
+      canvas.style.height = state.height + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    window.addEventListener("resize", resize);
+    resize(); if(btnMute) setMute(muted);
+    // 初回のユーザー操作でオーディオを解禁（Android/iOS対策）
+    window.addEventListener('pointerdown', primeAudio, { once:true, capture:true });
+    document.addEventListener('touchstart', primeAudio, { once:true, capture:true });
+
+    // ====== ゲームデータ ======
+    const BEST_KEY = "space-best";
+    let bestScore = Number(localStorage.getItem(BEST_KEY) || 0);
+    elBest.textContent = `BEST ${bestScore}`;
+
+    let running = false;
+    let timeLeft = 60.0; // 秒
+    let score = 0;
+    let life = 3;
+
+    /** @type {{x:number,y:number,r:number,speed:number,phase:number,hp:number}[]} */
+    let enemies = [];
+    /** @type {{x:number,y:number,v:number}[]} */
+    let bullets = [];
+    /** @type {{x:number,y:number,v:number}[]} */
+    let ebullets = [];
+    /** @type {{x:number,y:number,vx:number,vy:number,life:number,color:string}[]} */
+    let particles = [];
+
+    let spawnTimer = 0; // 敵スポーン
+    let fireTimer = 0;  // 自機オート射撃
+
+    const COLORS = ["#93c5fd", "#a78bfa", "#f472b6", "#f59e0b", "#34d399"];
+
+    const player = { x: state.width/2, y: state.height*0.78, r: 16, targetX: null, targetY: null };
+
+    function rand(min,max){ return Math.random()*(max-min)+min; }
+
+    // ====== 入力（ドラッグで自機移動） ======
+    function worldFromEvent(ev){ const rect=canvas.getBoundingClientRect(); const x=(ev.clientX ?? ev.touches?.[0]?.clientX ?? 0) - rect.left; const y=(ev.clientY ?? ev.touches?.[0]?.clientY ?? 0) - rect.top; return {x,y}; }
+    function onPointerDown(ev){ if(!running){ return; } ev.preventDefault(); const p=worldFromEvent(ev); player.targetX=p.x; player.targetY=p.y; }
+    function onPointerMove(ev){ if(!running){ return; } if(player.targetX==null) return; ev.preventDefault(); const p=worldFromEvent(ev); player.targetX=p.x; player.targetY=p.y; }
+    function onPointerUp(){ player.targetX = null; player.targetY = null; }
+    canvas.addEventListener("pointerdown", onPointerDown, {passive:false});
+    // 互換: スタートボタンが押せないケース用に、キャンバスをタップで開始
+    canvas.addEventListener("pointerdown", (e)=>{ if(!running && !startOverlay.classList.contains('hidden')){ e.preventDefault(); startGame(); } }, {passive:false});
+    canvas.addEventListener("pointermove", onPointerMove, {passive:false});
+    canvas.addEventListener("pointerup", onPointerUp, {passive:true});
+    canvas.addEventListener("pointercancel", onPointerUp, {passive:true});
+
+    // ====== パーティクル ======
+    function burst(x,y,color,count=10){
+      for(let i=0;i<count;i++){
+        const a = rand(0, Math.PI*2);
+        const s = rand(40, 140);
+        particles.push({ x, y, vx: Math.cos(a)*s, vy: Math.sin(a)*s, life: 0.6, color });
+      }
+    }
+
+    // ====== メインループ ======
+    let prev = performance.now();
+    function loop(now){
+      const dt = Math.min(0.033, (now - prev) / 1000);
+      prev = now;
+
+      // 背景（星空）
+      const h=state.height, w=state.width;
+      ctx.fillStyle = "#05070d"; ctx.fillRect(0,0,w,h);
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0, "#0b1020"); g.addColorStop(1, "#090d18");
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      // 星（簡易）
+      for(let i=0;i<50;i++){ const x=(i*97%w); const y=((i*53+Math.floor(now*0.03))%h); ctx.globalAlpha=0.2+((i%10)/50); ctx.fillStyle="#ffffff"; ctx.fillRect(x, y, 2, 2); }
+      ctx.globalAlpha=1;
+
+      if(running){
+        // 自機追従（なめらか）
+        if(player.targetX!=null){ player.x += (player.targetX - player.x)*Math.min(1, dt*12); player.y += (player.targetY - player.y)*Math.min(1, dt*12); }
+        // 画面内制限
+        player.x = Math.max(player.r, Math.min(w - player.r, player.x));
+        player.y = Math.max(player.r, Math.min(h - player.r, player.y));
+
+        // 射撃
+        fireTimer -= dt;
+        if(fireTimer <= 0){ fireTimer = 0.18; bullets.push({x:player.x, y:player.y - player.r - 4, v: -420}); beep(880,0.08,"square",0.15); }
+
+        // 敵スポーン
+        spawnTimer -= dt;
+        if(spawnTimer <= 0){
+          // スコアや残り時間に応じて頻度UP
+          const freq = Math.max(0.25, 0.8 - (60 - timeLeft)*0.01);
+          spawnTimer = freq;
+          const r = rand(14, 22);
+          enemies.push({ x: rand(r, w-r), y: -r-20, r, speed: rand(60, 120), phase: rand(0, Math.PI*2), hp: (r>18?2:1) });
+          // たまに敵弾
+          if(Math.random()<0.35){ ebullets.push({ x: rand(0,w), y: -10, v: rand(120, 160) }); }
+        }
+
+        // 更新：弾
+        for(const b of bullets){ b.y += b.v * dt; }
+        bullets = bullets.filter(b=> b.y > -20);
+
+        for(const eb of ebullets){ eb.y += eb.v * dt; }
+        ebullets = ebullets.filter(b=> b.y < h+20);
+
+        // 更新：敵（横にゆらゆら）
+        for(const e of enemies){ e.y += e.speed * dt; e.x += Math.sin(e.phase + now*0.003)*40*dt; }
+        enemies = enemies.filter(e=> e.y - e.r < h+40);
+
+        // 衝突（自弾→敵）
+        for(let i=enemies.length-1;i>=0;i--){ const e=enemies[i];
+          for(let j=bullets.length-1;j>=0;j--){ const b=bullets[j]; const dx=e.x-b.x, dy=e.y-b.y; if(dx*dx+dy*dy <= (e.r+6)*(e.r+6)){
+            bullets.splice(j,1); e.hp--; if(e.hp<=0){ enemies.splice(i,1); score+=20; elScore.textContent=`SCORE ${score}`; burst(e.x,e.y,COLORS[Math.floor(Math.random()*COLORS.length)],12); beep(540,0.08,"triangle",0.22); }
+            break;
+          } }
+        }
+
+        // 衝突（敵弾→自機 / 敵→自機）
+        function hitPlayer(){ life--; elLife.textContent = "❤️".repeat(life) + (life<3?"🖤".repeat(3-life):""); burst(player.x,player.y,"#f87171",18); beep(220,0.12,"sawtooth",0.3); if(navigator.vibrate){ try{ navigator.vibrate(120); }catch{} } if(life<=0){ endGame(); } }
+
+        for(let i=ebullets.length-1;i>=0;i--){ const b=ebullets[i]; const dx=player.x-b.x, dy=player.y-b.y; if(dx*dx+dy*dy <= (player.r+6)*(player.r+6)){ ebullets.splice(i,1); hitPlayer(); } }
+        for(let i=enemies.length-1;i>=0;i--){ const e=enemies[i]; const dx=player.x-e.x, dy=player.y-e.y; if(dx*dx+dy*dy <= (player.r+e.r)*(player.r+e.r)){ enemies.splice(i,1); hitPlayer(); } }
+
+        // パーティクル
+        for(const p of particles){ p.x += p.vx * dt; p.y += p.vy * dt; p.life -= dt; }
+        particles = particles.filter(p=> p.life>0);
+
+        // タイマー
+        timeLeft -= dt; if(timeLeft<=0){ endGame(); }
+      }
+
+      // 描画：自機
+      ctx.save();
+      // ほんのりグロー
+      ctx.shadowColor="#60a5fa"; ctx.shadowBlur=12;
+      ctx.fillStyle="#93c5fd";
+      ctx.beginPath(); ctx.moveTo(player.x, player.y - player.r);
+      ctx.lineTo(player.x - player.r*0.8, player.y + player.r*0.9);
+      ctx.lineTo(player.x + player.r*0.8, player.y + player.r*0.9);
+      ctx.closePath(); ctx.fill(); ctx.shadowBlur=0;
+      ctx.restore();
+
+      // 描画：敵
+      for(const e of enemies){ ctx.beginPath(); ctx.arc(e.x,e.y,e.r,0,Math.PI*2); ctx.fillStyle="#a78bfa"; ctx.shadowColor="#a78bfa"; ctx.shadowBlur=8; ctx.fill(); ctx.shadowBlur=0; }
+
+      // 描画：弾
+      ctx.fillStyle="#60a5fa"; for(const b of bullets){ ctx.fillRect(b.x-2,b.y-10,4,10); }
+      ctx.fillStyle="#f87171"; for(const b of ebullets){ ctx.fillRect(b.x-2,b.y,4,10); }
+
+      // パーティクル
+      for(const p of particles){ ctx.globalAlpha = Math.max(0, p.life*1.6); ctx.fillStyle=p.color; ctx.fillRect(p.x-2,p.y-2,4,4); ctx.globalAlpha=1; }
+
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+
+    // ====== ゲーム制御 ======
+    function startGame(){
+      running = false;
+      timeLeft = 60.0; score = 0; life = 3;
+      enemies=[]; bullets=[]; ebullets=[]; particles=[]; spawnTimer=0; fireTimer=0;
+      elScore.textContent = `SCORE ${score}`;
+      elTimer.textContent = `${timeLeft.toFixed(1)}s`;
+      elLife.textContent = "❤️❤️❤️";
+      startOverlay.classList.add("hidden");
+      resultOverlay.classList.add("hidden");
+      hud.classList.remove("hidden");
+      document.body.style.overscrollBehavior = "none";
+      doCountdown(()=>{ running = true; beep(740,0.1,"square",0.2); });
+    }
+
+    function endGame(){
+      running = false; timeLeft = 0; hud.classList.remove("hidden");
+      const best = Number(localStorage.getItem(BEST_KEY) || 0);
+      if(score>best){ localStorage.setItem(BEST_KEY, String(score)); elBest.textContent = `BEST ${score}`; }
+      resultText.textContent = `SCORE ${score} / BEST ${Math.max(score, best)}`;
+      resultOverlay.classList.remove("hidden");
+      document.body.style.overscrollBehavior = "auto";
+    }
+
+    // カウントダウン
+    function doCountdown(onDone){
+      countOverlay.classList.remove("hidden");
+      let n=3; countNum.textContent=String(n);
+      const id=setInterval(()=>{ n--; if(n>0){ countNum.textContent=String(n); beep(880,0.08,"square",0.18);} else { clearInterval(id); countOverlay.classList.add("hidden"); onDone&&onDone(); } }, 600);
+    }
+
+    // タイマー表示の更新
+    setInterval(()=>{ if(running){ elTimer.textContent = `${Math.max(0, timeLeft).toFixed(1)}s`; } }, 100);
+
+    // ボタン
+    btnStart?.addEventListener("click", startGame);
+    btnRetry?.addEventListener("click", startGame);
+    btnHow?.addEventListener("click", ()=>{
+      alert("\n【あそびかた】\n・指で自機をドラッグして移動します。\n・ショットは自動で発射されます。\n・敵に当たるか敵弾に当たるとライフが減ります(全3)。\n・60秒でできるだけ多くの敵を倒してスコアを伸ばそう！\n・🔊ボタンでサウンドのオン/オフが切り替えられます。\n");
+    });
+    btnMute?.addEventListener("click", ()=> setMute(!muted));
+
+    // スクロール誤動作を防ぐ
+    window.addEventListener("touchmove", e => { if(running) e.preventDefault(); }, { passive:false });
+  </script>
+</body>
+</html>
